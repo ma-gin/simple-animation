@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="mt-5 d-flex flex-column justify-content-center">
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -116,7 +116,32 @@
                     <td><button type="button" class="btn btn-primary" onclick="deleteRow(e)">Delete</button></td>
                   </tr>
                 </tbody>
-              </table>
+            </table>
+              <button type="button" class="addBtn btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTrack">Add Track</button>
+              <div class="modal fade" id="addTrack" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">#</span>
+                            <input value="" id="track-number" type="text" class="form-control" placeholder="Add Track Number" aria-label="Track Number" aria-describedby="basic-addon1"><br>
+                            <span class="input-group-text" id="basic-addon2">Title</span>
+                            <input value="" id="track-title" type="text" class="form-control" placeholder="Add Track Title" aria-label="Track Title" aria-describedby="basic-addon2"><br>
+                            <span class="input-group-text" id="basic-addon3">Duration</span>
+                            <input value="" id="track-duration" type="text" class="form-control" placeholder="Add Track Duration" aria-label="Track Duration" aria-describedby="basic-addon3">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Add Track</button>
+                    </div>
+                  </div>
+                </div>
+              </div>              
         </section>
     </div>
     <script
